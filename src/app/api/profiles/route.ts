@@ -44,14 +44,14 @@ export async function GET() {
     }
 
     // Format for frontend
-    const formattedUsers = users.map(user => ({
+    const formattedUsers = users.map((user: any) => ({
       id: user.id,
       username: user.username,
       avatar_url: user.avatarUrl,
       playstyle: user.playstyle,
       rank: user.rank,
       bio: user.bio,
-      top_games: user.topGames.map(g => g.name)
+      top_games: user.topGames.map((g: any) => g.name)
     }));
 
     return NextResponse.json(formattedUsers);

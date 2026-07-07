@@ -16,6 +16,7 @@ interface GamerProfile {
 }
 
 export default function Discover() {
+  const router = useRouter();
   const [profiles, setProfiles] = useState<GamerProfile[]>([]);
   const [currentIndex, setCurrentIndex] = useState(0);
   const [loading, setLoading] = useState(true);
